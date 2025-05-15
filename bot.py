@@ -16,10 +16,11 @@ from Song.broadcast import broadcast_handler
 from Song.commands import status, start, helper
 from Song.database.access_db  import db
 
-cbot = Client(session_name=Config.SESSION_NAME,
+cbot = Client(name=Config.SESSION_NAME,
               bot_token=Config.BOT_TOKEN,
               api_id=Config.API_ID,
               api_hash=Config.API_HASH)
+
 
 
 @cbot.on_message(filters.command('start') & filters.private)
